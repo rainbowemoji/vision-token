@@ -33,7 +33,7 @@ contract LSDToken is ERC20, Ownable {
         _burn(from, amount);
 
         uint256 currentAllowance = allowance(from, _msgSender());
-        require(currentAllowance >= amount, "VZN: burn amount exceeds allowance");
+        require(currentAllowance >= amount, "LSD: burn amount exceeds allowance");
         unchecked {
             _approve(from, _msgSender(), currentAllowance - amount);
         }
