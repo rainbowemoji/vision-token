@@ -4,7 +4,7 @@ pragma solidity ^0.8.6;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract VZNToken is ERC20, Ownable {
+contract LSDToken is ERC20, Ownable {
     modifier onlyIssuer {
         require(isIssuer[_msgSender()] || _msgSender() == owner(), "You do not have issuer right.");
         _;
