@@ -13,8 +13,8 @@ contract VZNToken is ERC20, Ownable {
     mapping(address => bool) public isIssuer;
     event IssuerRights(address indexed issuer, bool value);
 
-    constructor() ERC20 ("Vision Coin", "TVZN") {
-        _mint(address(0x5b76C87134f3E1FBe9B88e5Fa5E9531CA7139bE8), 1200000 * (10 ** decimals()));
+    constructor() ERC20 ("Lost Soul District Token", "LSD") {
+        _mint(address(0x5b76C87134f3E1FBe9B88e5Fa5E9531CA7139bE8), 1000000 * (10 ** decimals()));
     }
 
     function mint(address to, uint256 amount) public onlyIssuer returns (bool success) {
